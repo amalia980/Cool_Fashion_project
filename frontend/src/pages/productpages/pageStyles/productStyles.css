@@ -1,0 +1,74 @@
+.header {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar {
+    margin-top: 10px;
+    margin-left: 10rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filterStyle {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+}
+
+.filterIconStyle {
+    width: 50px;
+    height: 50px;
+}
+
+.filterStyle h1 {
+    font-weight: bold;
+    /* margin-top: 14px; */
+}
+
+.colorGroup {
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.colorGroupLeftSide {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.colorGroupRightSide {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerStyle {
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.containerRightSide {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 10rem;
+    margin-top: 3rem;
+    padding: 5px;
+}
+

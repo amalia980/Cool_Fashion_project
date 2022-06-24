@@ -1,0 +1,514 @@
+//CHECKOUT (KASSA) SIDAN
+
+//Kassan text
+.checkout-bakgrund {
+  background: url('../assets/images/wallpaper/dusan-jovic-py2NabvrB9Q-unsplash.jpg');
+  width: 100%;
+  min-height: 95vh;
+  background-size: cover;
+  background-position: 50% 45%;
+}
+
+.overlay-checkout {
+  width: 100%;
+  min-height: 95vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.checkout-text-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-text-div h1 {
+  font-weight: bold;
+  color: white;
+  font-size: 4.5vw;
+  margin: 3rem 0;
+}
+
+//de tre korten under
+.checkout-cards-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.banner {
+  width: 100%;
+  height: 2.7rem;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  position: static;
+}
+
+.banner-text {
+  color: white;
+  font-size: 1.5vw;
+  margin-left: 0.5rem;
+}
+
+//kort 1
+.order-summary-card-wrapper {
+  width: 27vw;
+  background: #e1ffa3;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.order-summary-card-div {
+  width: 100%;
+  height: 28vw;
+  background-color: #e1ffa3;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.no-products p {
+  margin: .5rem;
+}
+
+.product-checkout {
+  width: 100%;
+  border-bottom: 1px solid #444;
+  padding: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.product-checkout:last-child {
+  border-bottom: none;
+}
+
+.product-img-left {
+  width: 7rem;
+  height: 18vh;
+  background-color: grey;
+  object-fit: cover;
+  margin: 0;
+}
+
+.product-info-right {
+  display: flex;
+  flex: 1;
+  width: 77%;
+  height: 100%;
+  position: relative;
+}
+
+.title-price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title-price p:first-child {
+  position: absolute;
+  left: 8.5rem;
+}
+
+.title-price p {
+  font-size: 1.2vw;
+}
+
+.price {
+  position: absolute;
+  right: 0.7rem;
+}
+
+.color-size-remove-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-size {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0px;
+  left: 8.5rem;
+}
+
+.color-size p:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.color {
+  font-size: 1.2vw;
+}
+
+.size {
+  font-size: 1.2vw;
+}
+
+.remove {
+  position: absolute;
+  bottom: -5px;
+  right: 0.7rem;
+  text-decoration: underline;
+  font-size: 1.1vw;
+  color: #444;
+  cursor: pointer;
+}
+
+.totalPrice-checkout-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5vw;
+  background-color: #e1ffa3;
+  border-top: 1px solid #444;
+  align-items: center;
+  height: 2.5vw;
+}
+
+.totalPrice-checkout-div h4 {
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+//kort 2
+.shipping-card-div {
+  width: 27vw;
+  height: 33vw;
+  background-color: #e1ffa3;
+  margin-bottom: 2rem;
+}
+
+.shipping-card-wrapper {
+  padding: 2vw;
+}
+
+.shipping-card-div input {
+  width: 100%;
+  height: 2.65vw;
+  outline: none;
+  border: none;
+  text-indent: 0.5rem;
+  font-size: 1.3vw;
+}
+
+.first-sec-input {
+  margin-bottom: 1.2vw;
+}
+
+.second-sec-input {
+  margin-top: 1.2vw;
+}
+
+//kort 3
+.payment-card-div {
+  width: 27vw;
+  height: 33vw;
+  background-color: #e1ffa3;
+  margin-bottom: 2rem;
+}
+
+.payment-card-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.payment-card-wrapper {
+  padding: 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.payment-icons-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.visa-icon  {
+  height: 3.7vw;
+  width: 4vw;
+  margin-right: 1rem;
+  margin-top: 19px;
+}
+
+.payment-icon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.payment-icon img {
+  width: 3.5vw;
+  height: 3.3vw;
+   margin-right: 1rem;
+   margin-bottom: -2rem;
+   position: inherit;
+   bottom: 15px;
+}
+
+.payment-icon p {
+  font-size: 0.5vw;
+  margin-right: 12px;
+  margin-top: -2px;
+  position: absolute;
+  top: 2.3rem;
+}
+
+.first-last-input {
+  width: 100%;
+  height: 2.65vw;
+  outline: none;
+  border: none;
+  text-indent: 0.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+#first-input-payment {
+    margin-top: 2vw;
+}
+
+.payment-middle-inputs-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-middle-inputs {
+  width: 47%;
+  height: 2.65vw;
+  outline: none;
+  border: none;
+  text-indent: 0.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.make-purchase-btn {
+  width: 24vw;
+  border: none;
+  outline: none;
+  height: 2.65vw;
+  background-color: black;
+  color: #a3ff77;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2vw;
+  position: absolute;
+  bottom: 2vw;
+  left: 1.5vw;
+}
+
+// MEDIA QUERIES
+@media only screen and (max-width: 1438px) {
+  .checkout-cards-div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .banner {
+    height: 4vw;
+  }
+  .banner-text {
+    font-size: 1.7vw;
+    margin-left: 1rem;
+  }
+
+  //kort 1
+  .order-summary-card-wrapper {
+    width: 40vw;
+    margin-bottom: 2rem;
+  }
+  .order-summary-card-div {
+    width: 100%;
+    height: 42vw;
+  }
+  .title-price p {
+    font-size: 1.5vw;
+  }
+  .color,
+  .size {
+    font-size: 1.5vw;
+  }
+  .remove {
+    font-size: 1.3vw;
+  }
+  .totalPrice-checkout-div {
+    height: 3.8vw;
+  }
+  .totalPrice-checkout-div h4 {
+    font-size: 1.8vw;
+    padding: 0.5rem;
+    margin-bottom: -1px;
+  }
+
+  //kort 2
+  .shipping-card-div {
+    width: 40vw;
+    height: 50vw;
+  }
+  .shipping-card-wrapper {
+    padding: 3vw;
+  }
+  .shipping-card-div input {
+    height: 4vw;
+    text-indent: 0.5rem;
+    font-size: 2vw;
+  }
+  .first-sec-input {
+    margin-bottom: 1.5vw;
+  }
+
+  .second-sec-input {
+    margin-top: 1.5vw;
+  }
+  .shipping-card-wrapper input:nth-child(5) {
+    margin-top: 2.7vw;
+  }
+
+  //kort 3
+  .payment-card-div {
+    width: 40vw;
+    height: 50vw;
+  }
+
+  #first-input-payment {
+      margin-top: 2vw;
+  }
+
+  .payment-icons-row img {
+    width: 5vw;
+    height: 4.7vw;
+  }
+
+  .payment-icon p {
+    font-size: 0.7vw;
+    margin-left: -0.5rem;
+  }
+
+  .first-last-input {
+    width: 100%;
+    height: 4vw;
+    text-indent: 0.5rem;
+    font-size: 2vw;
+    margin-bottom: 1rem;
+  }
+
+  .payment-middle-inputs-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .payment-middle-inputs {
+    height: 4vw;
+    text-indent: 0.5rem;
+    font-size: 2vw;
+    margin-bottom: 1rem;
+  }
+
+  .make-purchase-btn {
+    width: 37vw;
+    height: 4vw;
+    font-size: 1.8vw;
+    bottom: 2vw;
+    left: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+    .checkout-cards-div {
+        display: flex;
+        flex-direction: column;
+      }
+      .banner {
+        height: 5vw;
+      }
+      .banner-text {
+        font-size: 2vw;
+      }
+    
+      //kort 1
+      .order-summary-card-wrapper {
+        width: 60vw;
+      }
+      .order-summary-card-div {
+        width: 100%;
+        height: 62vw;
+      }
+      .title-price p {
+        font-size: 2.5vw;
+      }
+      .color,
+      .size {
+        font-size: 2.5vw;
+      }
+      .remove {
+        font-size: 1.8vw;
+      }
+      .totalPrice-checkout-div {
+        height: 5vw;
+      }
+      .totalPrice-checkout-div h4 {
+        font-size: 2.2vw;
+      }
+    
+      //kort 2
+      .shipping-card-div {
+        width: 60vw;
+        height: 70vw;
+      }
+      .shipping-card-wrapper {
+        padding: 3vw;
+      }
+      .shipping-card-div input {
+        height: 6vw;
+        text-indent: 0.5rem;
+        font-size: 2.8vw;
+      }
+      .first-sec-input {
+        margin-bottom: 2vw;
+      }
+
+      .second-sec-input {
+        margin-top: 2vw;
+      }
+    
+      //kort 3
+      .payment-card-div {
+        width: 60vw;
+        min-height: 60vw;
+      }
+    
+      .payment-icons-row img {
+        width: 7.6vw;
+        height: 7vw;
+      }
+
+      .payment-icon p {
+        font-size: 1vw;
+        margin-right: 8px;
+      }
+    
+      .first-last-input {
+        height: 6vw;
+        font-size: 3vw;
+      }
+
+      .payment-middle-inputs {
+        height: 6vw;
+        font-size: 3vw;
+      }
+    
+      .make-purchase-btn {
+        width: 53vw;
+        height: 5vw;
+        font-size: 2.5vw;
+        bottom: 4vw;
+        left: 4vw;
+      }
+}

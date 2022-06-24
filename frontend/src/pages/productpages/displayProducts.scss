@@ -1,0 +1,38 @@
+//PRODUCT CARD STYLING
+
+.buy-btn {
+    background-color: black !important;
+    border: none!important;
+    color: #a3ff77!important;
+   
+}
+
+.title-price-outOfStock-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title-price-container {
+    margin-bottom: .5rem;
+}
+
+//out of stock text styling
+.outOfStock-txt {
+    margin-top: 4px;
+    font-size: .6rem;
+    color: #b4000f;
+    font-weight:bold;
+}
+
+.heartButton{
+    background-color: unset;
+    border: unset;
+    outline: unset;
+    margin-left: 5px;
+    color:grey;
+}
+
+.heartButtonClick{
+    svg{color: red;}
+}

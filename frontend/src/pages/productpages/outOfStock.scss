@@ -1,0 +1,33 @@
+//out of stock modal styling
+
+.outofstock-underlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 4600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.outOfStock-container {
+    width: 25rem;
+    height: 15rem;
+    z-index: 4601;
+    background-color: black;
+    padding: 1rem;
+}
+
+.outOfStock-wrapper {
+    border: dotted 5px white;
+    padding: 3rem;
+}
+
+.outOfStock-wrapper p {
+    color: white;
+}

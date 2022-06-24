@@ -1,0 +1,17 @@
+
+
+
+.wrapperChangeProducts{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    .wrapperAccordin{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        .accordion{
+            width:50%;
+            margin-top:5rem;
+        }
+    }
+}

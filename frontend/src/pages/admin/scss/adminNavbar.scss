@@ -1,0 +1,34 @@
+.navbarAdmin {
+  background-color: #1c1c1c;
+  width: 219px;
+}
+
+.Admin {
+  background-color: black;
+  height: 87px;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  color: white;
+}
+
+.wrapperLinks {
+  display: flex;
+  flex-direction: column;
+  .adminLink {
+    border: unset;
+    background-color: unset;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+    height: 69px;
+    color: white;
+    text-align: left;
+    &:active {
+      background-color: #404040;
+    }
+  }
+}

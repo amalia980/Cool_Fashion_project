@@ -1,0 +1,79 @@
+@import "../../index.scss";
+
+.contact_form {
+  border: 1px solid $hover-link;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 40rem;
+  height: fit-content;
+  left: 50%;
+  bottom: -4rem;
+  transform: translate(-50%, -50%);
+  @media screen and (max-width: 700px) {
+    max-width: 21rem;
+  }
+
+  textarea {
+    height: 5rem;
+  }
+  input,
+  textarea {
+    background: #ffffff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  select {
+    background: #ffffff;
+    border-radius: 5px;
+    margin: 0.5rem;
+  }
+
+  .button_form {
+    color: $hover-link;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 199px;
+    height: 45px;
+    outline: none;
+    align-self: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.round_thing {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px dotted white;
+  align-self: center;
+  font-size: 70px;
+  outline-offset: 5px;
+  outline: 1px solid white;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  svg {
+    position: relative;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.content_wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}

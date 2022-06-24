@@ -1,0 +1,63 @@
+
+.wrapperEverything{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    h1{
+        margin:4rem;
+    }
+    h2{
+        margin:1rem;
+    }
+    p{
+        margin:1rem;
+    }
+
+}
+
+.wrapperChangeProducts{
+    padding:2rem;
+    width: fit-content;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap:wrap;
+    background-color: white;
+    min-height:fit-content;
+    margin-bottom: 5rem;
+    justify-content: space-around;
+}
+
+
+.wrapperRubrik, .wrapperAlPictures{
+    display: flex;
+}
+
+.rowOne{
+    display: flex;
+    flex-direction: column;
+}
+
+.rowTwo{
+    p{
+        font-size: 18px;
+        font-weight:500;
+    }
+}
+
+.rowThree{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    button{
+        margin: 1rem;
+    }
+}
+
+.rubrikDiv{
+ margin:1rem;
+ width: 17rem;
+}
+

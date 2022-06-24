@@ -1,0 +1,91 @@
+
+.outerDivEmail{
+  margin-top: 1rem;
+}
+
+
+.wrapperEmail{
+  background-color: white;
+  height: fit-content;
+  width: fit-content;
+  margin-top:1rem;
+
+}
+
+
+
+.emailInformation {
+  border-bottom: 1px solid black;
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  cursor: pointer;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    svg {
+      font-size: 41px;
+      color: #a9a9a9;
+    }
+  }
+  .userinformation {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.right {
+  height: 100%;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  .emailName {
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    flex: none;
+    height: 4rem;
+  }
+  .emailBody {
+    padding: 1rem;
+    flex: 1;
+  }
+}
+
+
+.answerWrapper{
+  margin-top: 5rem;
+  form{
+  margin:auto;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction:column; 
+  width:95%;
+  textarea{
+    height:8rem;
+    padding:5px;
+    margin-top:5px
+  }
+  button{
+    padding:5px;
+    margin-top:5px
+  }
+ }
+}
+
+.deleteEmail{
+  height: 2rem;
+  width: fit-content;
+  padding:5px;
+  font-size: 16px;
+  align-self: center;
+  margin-right: 1rem;
+}

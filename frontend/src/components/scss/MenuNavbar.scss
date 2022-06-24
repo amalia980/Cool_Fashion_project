@@ -1,0 +1,276 @@
+@import '../../index.scss';
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+
+  .logo_div {
+    flex: 0.5;
+  }
+
+  .shop_div {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.closed_end {
+  display: flex;
+}
+
+.nav_button {
+  background-color: unset;
+  border: unset;
+  color: white;
+  white-space: nowrap;
+  &.open_button {
+    position: relative;
+    top: -16rem;
+  }
+
+  &:hover {
+    color: $hover-link;
+    border-bottom: 1px solid $hover-link;
+  }
+}
+
+.drop_shop {
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 4rem;
+  top: 3rem;
+  left: 0;
+  background-color: black;
+  margin-top: -1px;
+  a {
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: $hover-link;
+      border-bottom: 1px solid $hover-link;
+    }
+  }
+}
+
+.drop_Login {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 3rem;
+  background-color: black;
+  min-width: 10rem;
+  align-items: center;
+  right: 2rem;
+
+  a {
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: $hover-link;
+      text-decoration: revert;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    top: 32rem;
+    right: 20.5rem;
+  }
+}
+
+i {
+  position: absolute;
+  color: black;
+  text-align: center;
+}
+
+input::-webkit-input-placeholder {
+  padding-left: 1.5rem;
+}
+
+form {
+  margin-right: 1rem;
+}
+
+//********************************************************************//
+//****************************HAMBURGER*******************************//
+//********************************************************************//
+
+nav {
+  &.showMenu {
+    z-index: 10000;
+    height: 100vh;
+    justify-content: flex-start;
+    position: fixed;
+  }
+}
+
+.innerNav {
+  align-items: center;
+  @media screen and (max-width: 700px) {
+    align-items: unset;
+  }
+  &.showInner {
+    border-left: 1px solid $hover-link;
+    padding-left: 2rem;
+    width: 25%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.drop_shop {
+  &.showdrop {
+    position: relative;
+    top: -1rem;
+    justify-content: unset;
+    display: flex;
+    flex-direction: column;
+    left: 8rem;
+    align-items: start;
+  }
+}
+
+.innerNav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  &.showInner {
+    margin-left: 4rem;
+  }
+}
+
+#shop.open_navButton,
+#loggaUt.open_navButton,
+#loggaIn.open_navButton {
+  display: block;
+  padding: 0;
+}
+
+#loggaIn.open_navButton,
+#loggaUt.open_navButton {
+  margin-right: 1rem;
+}
+
+.end_div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  #checkout {
+    padding-top: 1.5rem;
+  }
+}
+
+.closed_endend_div {
+  #checkout {
+    padding-top: 1.5rem;
+  }
+}
+
+#checkout {
+  position: relative;
+  text-align: center;
+  color: white;
+  &:hover {
+    color: $hover-link;
+  }
+}
+
+#checkout > p {
+  font-size: .8rem;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+&:hover {
+  color: $hover-link;
+}
+}
+
+#hamburger {
+  margin-left: 1rem;
+  &.open_navButton {
+    position: absolute;
+    padding: 0;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #shop,
+  #loggaUt,
+  #loggaIn,
+  form {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  #hamburger {
+    display: none;
+  }
+}
+
+.module_login {
+  color: white;
+  width: fit-content;
+  position: absolute;
+  z-index: 10000;
+  top: 2rem;
+  right: 4rem;
+  font-size: 15px;
+  border: none;
+  border-bottom: 1px solid $hover-link;
+  background-color: unset;
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+}
+
+//bootstrap take away styling
+
+a.dropdown-item.active {
+  background-color: unset;
+  &hoover {
+    background-color: unset;
+  }
+}
+
+a.dropdown-item {
+  width: fit-content;
+  &hoover {
+    background-color: unset;
+  }
+}
+
+//LOGINFORMULÄR STYLING//
+
+#login_form {
+  border: 1px solid $hover-link;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 40rem;
+  height: fit-content;
+  position:inherit;
+  left:unset;
+  bottom:unset;
+  transform:unset;
+}

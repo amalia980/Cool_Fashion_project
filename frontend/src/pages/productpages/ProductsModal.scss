@@ -1,0 +1,106 @@
+//products modal styling
+
+.bg-underlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4000;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background-color: white;
+    z-index: 4000;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    position: relative;
+}
+
+//left side (carousel) of modal
+.product-modal-left {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-div {
+    width: 94%;
+}
+
+//right side (info) of modal
+.product-modal-right {
+    width: 30%;
+    padding: .5rem;
+    flex: 1;
+    position: relative;
+}
+
+.title-closeBtn-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-closeBtn-row h1{
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.title-closeBtn-row img {
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+}
+
+.product-modal-right p {
+    margin-right: 2rem;
+}
+
+.product-modal-left-bottom-info {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+.product-modal-left-bottom-info select {
+    width: 90%;
+    margin-bottom: 1rem;
+    outline: 1px solid #444;
+    border: none;
+    height: 2.4rem;
+    border-radius: 0;
+
+}
+
+.product-modal-left-bottom-info button {
+    width: 90%;
+    height: 3rem;
+    background-color: black;
+    color: #affe77;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+//out of stock text styling
+.color-outOfStock-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.outOfStock-text {
+    font-size: 1rem;
+    color: #b4000f;
+    font-weight:bold;
+}

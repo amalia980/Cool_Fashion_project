@@ -1,0 +1,30 @@
+
+
+GET http://localhost:5000/api/getEmails
+
+###
+
+POST http://localhost:5000/api/newEmail
+content-type: application/json
+
+{
+    "name":"Frida",
+    "text":"Det här är ett mail",
+    "email":"fridasofia.bolin@gmail.com"
+}
+
+### 
+
+POST http://localhost:5000/api/newEmail
+content-type: application/json
+
+{
+    "name":"Fripps",
+    "message":"Det här är ett nytt mail",
+    "email":"fridasofia.bolin@gmail.com"
+}
+
+
+###
+
+DELETE http://localhost:5000/api/deleteEmail/62ab77fff8da583d6c45bae9
