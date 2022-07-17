@@ -101,7 +101,7 @@ const DisplayProds = (props) => {
         )
       })}
 
-      {/* {show && (
+      {show && (
         <ProductsModal
           product={product}
           setShow={setShow}
@@ -109,9 +109,9 @@ const DisplayProds = (props) => {
           cart={cart}
           setShowToast={setShowToast}
         />
-      )} */}
+      )}
 
-      {/* <Card
+       <Card
         style={rotate ? { maxWidth: '500px' } : { maxWidth: '200px' }}
         key={product.id}
       >
@@ -191,7 +191,7 @@ const DisplayProds = (props) => {
             </div>
           </div>
         </Card.Body>
-      </Card> */}
+      </Card>
     </>
   )
 }

@@ -5,6 +5,9 @@ import LatestCollections from './latestCollections'
 import './main.scss'
 import ShopByCategory from './shopByCategory'
 import arrowDownIcon from '../../assets/icons/arrowDown.png'
+import ShipmentReturnBanner from './shipmentReturnBanner'
+import SaleBanner from './saleBanner'
+import TiktokSlide from './tiktokSlide'
 
 const Main = () => {
   return (
@@ -24,11 +27,15 @@ const Main = () => {
         {/* bakgrundsbild */}
 
         {/* section 2. ikoner med text och SPRING DEAL banner*/}
+        <ShipmentReturnBanner />
+
+        <SaleBanner />
 
         <LatestCollections />
         {/* section 3. senaste kollektionerna */}
 
         {/* section 4.  följ oss på tiktok med slider*/}
+        <TiktokSlide />
       </div>
     </>
   )

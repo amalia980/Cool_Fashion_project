@@ -1,0 +1,26 @@
+.shipmentReturn-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 4.8vw;
+    padding-bottom: 4.8vw;
+}
+
+.shipmentReturn-divs {
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.shipmentReturn-divs img {
+    width: 6vw;
+}
+
+.shipmentReturn-divs p {
+    color: white;
+    font-size: 1vw;
+    line-height: normal;
+}

@@ -1,0 +1,49 @@
+
+.tiktok-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.tiktok-left-wrapper {
+    width: 50%;
+    flex: 1;
+}
+
+.tiktok-left-wrapper h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    margin-left: 10rem;
+}
+
+.tiktok-left-wrapper img {
+    margin-left: 10rem;
+    width: 8vw;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.tiktok-left-wrapper img:hover {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5%;
+    transition: 1s;
+}
+
+.tiktok-right-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.tiktok-carousel-wrapper {
+    width: 24rem;
+    display: flex;
+}
+
+.tiktok-carousel {
+    margin: 0 auto;
+}
+
+.tiktok-img {
+    margin-bottom: 3rem;
+}
