@@ -4,7 +4,7 @@ import Modal from "../modal/Modal";
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
 import { UserContext } from "../context/UserContext";
-
+import misfitIcon from "../assets/icons/misfits_icon.png"
 //style
 import "./scss/Footer.scss";
 
@@ -24,7 +24,7 @@ const Footer = (props) => {
     <div>
       <footer style={{ position: "absolute" }}>
         <div className="brand_logo">
-          <p>COOL FASHION</p>
+          <img src={misfitIcon} alt={misfitIcon} />
         </div>
         <div className="footer_links">
           <Modal open={isOpen} onClose={() => setIsOpen(false)}>

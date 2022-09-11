@@ -1,46 +1,53 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import products from "./pantsProducts";
-import DisplayProducts from "../displayProducts";
-import PantsHeader from "../../../assets/images/Produkt_headers/byxor.png";
-import FilterIcon from "../../../assets/icons/filter.png";
-import Checkbox from "../../../components/Checkbox";
-import "../pageStyles/productStyles.css";
-import SearchProducts from "../../../functions/searchProducts/search";
+import React from 'react'
+import { useState, useEffect } from 'react'
+import products from './pantsProducts'
+import DisplayProducts from '../displayProducts'
+import PantsHeader from '../../../assets/images/Produkt_headers/pants.png'
+import FilterIcon from '../../../assets/icons/filter.png'
+import Checkbox from '../../../components/Checkbox'
+import '../pageStyles/productStyles.css'
+import SearchProducts from '../../../functions/searchProducts/search'
 
 const Pants = () => {
-  const [items, setItems] = useState([]);
-  const [input, setInput] = useState("");
-  const [open, setOpen] = useState(false);
+  // const [items, setItems] = useState(products)
+  const [items, setItems] = useState([])
+  const [input, setInput] = useState('')
+  const [open, setOpen] = useState(false)
+
 
   const handleInput = (e) => {
-    const lowerCase = e.target.value.toLowerCase();
-    setInput(lowerCase);
-    setOpen(!open);
-  };
+    const lowerCase = e.target.value.toLowerCase()
+    setInput(lowerCase)
+    setOpen(!open)
+  }
 
-  useEffect(() => {
-    setItems(products);
-  }, []);
+  const url = "http://localhost:5000/api/product/category/Pants"
+  
+  // useEffect(() => {
+  //   setItems(products);
+  // }, []);
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/api/product/allproducts/").then((res) => res.json()).then((json) => {
-  //     setItems(products);
-  //     console.log(json);
-  //   })
+  //   fetch('http://localhost:5000/api/product/category/Pants')
+  //     .then((res) => res.json())
+  //     .then((json) => {
+  //       setItems(json.products)
+  //       console.log(json)
+  //     })
   // }, [])
 
+
   return (
-    <div style={{ width: "auto", height: "auto" }}>
+    <div style={{ width: 'auto', height: 'auto' }}>
       <div className="header">
         <img
           src={PantsHeader}
           style={{
-            width: "100%",
-            height: "auto",
-            objectFit: "cover",
-            marginTop: "0",
-            marginBottom: "0",
+            width: '100%',
+            height: 'auto',
+            objectFit: 'cover',
+            marginTop: '0',
+            marginBottom: '0',
           }}
           alt="pants header"
         />
@@ -59,8 +66,8 @@ const Pants = () => {
           <div>
             <h4
               style={{
-                fontSize: "1.5rem",
-                fontWeight: "bold",
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
               }}
             >
               SÖK
@@ -71,8 +78,8 @@ const Pants = () => {
           <div>
             <h4
               style={{
-                fontSize: "1.5rem",
-                fontWeight: "bold",
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
               }}
             >
               Pris Klasser
@@ -84,8 +91,8 @@ const Pants = () => {
             <hr />
             <h4
               style={{
-                fontSize: "1.5rem",
-                fontWeight: "bold",
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
               }}
             >
               Färg
@@ -111,8 +118,8 @@ const Pants = () => {
             <hr />
             <h4
               style={{
-                fontSize: "1.5rem",
-                fontWeight: "bold",
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
               }}
             >
               Storlek
@@ -129,13 +136,22 @@ const Pants = () => {
           </div>
         </div>
         <div className="containerRightSide">
-          {items.map((item) => (
+           {/* {items.map((item) => (
             <DisplayProducts key={item.id} product={item} />
-          ))}
+          ))}  */}
+
+          <DisplayProducts
+            key={url.id}
+            product={url}
+            image={products}
+            setItems={setItems}
+            items={items}
+          />
+
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Pants;
+export default Pants

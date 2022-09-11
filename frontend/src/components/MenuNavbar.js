@@ -21,6 +21,7 @@ import './scss/MenuNavbar.scss'
 import { BsBag } from 'react-icons/bs'
 import { MenuDown } from 'react-bootstrap-icons'
 import { MenuUp } from 'react-bootstrap-icons'
+import misfitIcon from '../assets/icons/misfits_icon.png'
 
 const MenuNavbar = (props) => {
   const { loggedIn, setLoggedIn, setUser } = useContext(UserContext)
@@ -57,7 +58,7 @@ const MenuNavbar = (props) => {
         <nav className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
           <div className={`innerNav ${navbarOpen ? 'showInner' : ''}`}>
             <button className="nav_button" onClick={() => navigate('/')}>
-              COOL FASHION
+            <img src={misfitIcon} alt={misfitIcon} />
             </button>
 
             <div style={{ height: '1.5rem' }}>
@@ -135,7 +136,7 @@ const MenuNavbar = (props) => {
         <nav className={`menuNav ${navbarOpen ? 'showMenu' : ''}`}>
           <div className={`innerNav ${navbarOpen ? 'showInner' : ''}`}>
             <button className="nav_button" onClick={() => navigate('/')}>
-              COOL FASHION
+              <img src={misfitIcon} alt={misfitIcon} />
             </button>
 
             <div style={{ height: '1.5rem' }}>

@@ -7,22 +7,23 @@ import { Carousel } from 'react-bootstrap'
 import ToastMessage from './ToastMessage'
 import ProductsModal from './ProductsModal'
 import Share from '../../components/Share'
+import axios from 'axios'
+
 
 //Styling
-import { BsArrowClockwise } from 'react-icons/bs'
 import { BsFillHeartFill } from 'react-icons/bs'
 import './displayProducts.scss'
 import OutOfStock from './outOfStock'
 
 const DisplayProds = (props) => {
-  const { product } = props
+  const { product, image } = props;
 
   const [show, setShow] = React.useState(false)
   const [showToast, setShowToast] = React.useState(false)
-  const [rotate, setRotate] = React.useState(false)
   const [outOfStock, setOutOfStock] = React.useState(false)
   const [heartClicked, setHeartClicked] = useState()
-  const [item, setItem] = useState([])
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(false)
 
   //check products that are no longer in stock
   const stock = product.quantity === 0
@@ -52,12 +53,6 @@ const DisplayProds = (props) => {
     console.log(product)
   }
 
-  const rotateImage = {
-    width: rotate ? '500px' : '200px',
-    height: rotate ? '300px' : '300px',
-    transition: 'transform 150ms ease',
-  }
-
   const handlerHeartButton = () => {
     setHeartClicked(!heartClicked)
     const exist = heartList.find((x) => x.id === product.id)
@@ -75,33 +70,50 @@ const DisplayProds = (props) => {
     alert('din produkt är tillagd i önskelistan')
   }
 
-  useEffect(() => {
-    showProducts()
-  }, [])
+ useEffect(() => {
+   fetch(product)
+     .then((res) => res.json())
+     .then((json) => {
+       setData(json.products)
+       console.log(json)
+     })
+   setLoading(true)
+ }, [])
+  
+  // useEffect(() => {
+  //     setData(product)
+  // }, [])
 
-  const showProducts = async () => {
-    const res = await fetch('http://localhost:5000/api/product/allproducts')
-    const data = await res.json()
-    setItem(data.products)
-  }
-
+  // const showProducts = async () => {
+  //   const res = await fetch(product)
+  //   const data = await res.json()
+  //   setData(data.products)
+  // }
+  // <img src={i.img[0].img} alt={i.title} />
   return (
     <>
       {outOfStock && <OutOfStock setOutOfStock={setOutOfStock} />}
       {showToast && <ToastMessage setShowToast={setShowToast} />}
 
-      {item.map((i) => {
+      {/* {loading && <h3>Loading...</h3>} */}
+
+      {data.map((i) => {
+        const base64string = btoa(
+          String.fromCharCode(...new Uint8Array(i.image.data))
+        )
         return (
-          <div key={i._id}>
+          <div className='product-div' key={i._id}>
+            <img src={`data:image/jpeg;base64,${base64string}`} alt={i.title} />      
             <b>{i.title}</b>
             <p>{i.price}</p>
 
-            <button onClick={() => addProducts(i)}>buy</button>
+            <button onClick={() => addProducts(i)}>BUY</button>
           </div>
         )
-      })}
+})} 
+    
 
-      {show && (
+      {/* {show && (
         <ProductsModal
           product={product}
           setShow={setShow}
@@ -111,10 +123,6 @@ const DisplayProds = (props) => {
         />
       )}
 
-       <Card
-        style={rotate ? { maxWidth: '500px' } : { maxWidth: '200px' }}
-        key={product.id}
-      >
         <div
           style={{
             position: 'relative',
@@ -122,32 +130,16 @@ const DisplayProds = (props) => {
             justifyContent: 'flex-end',
           }}
         >
-          <BsArrowClockwise
-            style={{
-              position: 'absolute',
-              zIndex: '1000',
-              backgroundColor: '#878484a1',
-              color: '#FFF700',
-              fontSize: '1.5rem',
-              margin: '0.5rem',
-              borderRadius: '50%',
-              cursor: 'pointer',
-            }}
-            onClick={() => setRotate(!rotate)}
-          />
+
         </div>
-        <Carousel interval={null}>
-          <Carousel.Item>
+
             <img
-              style={rotateImage}
               className="d-block"
               src={product.img[0].img}
               alt={product.title}
             />
-          </Carousel.Item>
-          <Carousel.Item>
+
             <img
-              style={rotateImage}
               className="d-block"
               src={product.img[1].img}
               alt={product.title}
@@ -155,13 +147,13 @@ const DisplayProds = (props) => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              style={rotateImage}
               className="d-block"
               src={product.img[2].img}
               alt={product.title}
             />
           </Carousel.Item>
-        </Carousel>
+        </Carousel >
+          
         <Card.Body>
           <div className="title-price-outOfStock-row">
             <div className="title-price-container">
@@ -190,8 +182,7 @@ const DisplayProds = (props) => {
               <Share></Share>
             </div>
           </div>
-        </Card.Body>
-      </Card>
+        </Card.Body> */}
     </>
   )
 }

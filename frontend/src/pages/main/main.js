@@ -15,7 +15,7 @@ const Main = () => {
       <div className="hero">
         {/* HERO */}
         <div className="hero-overlay">
-          <h1 className="hero-text">SLOGAN</h1>
+          <h1 className="hero-text">MISFITS ONLY</h1>
           <img src={arrowDownIcon} alt="arrow icon" />
         </div>
       </div>

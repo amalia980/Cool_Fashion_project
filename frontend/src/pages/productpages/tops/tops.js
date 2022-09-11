@@ -1,8 +1,8 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import products from './topsProducts'
 import DisplayProducts from '../displayProducts'
-import TopsHeader from '../../../assets/images/Produkt_headers/toppar.png'
+import TopsHeader from '../../../assets/images/Produkt_headers/tops.png'
 import FilterIcon from '../../../assets/icons/filter.png'
 import Checkbox from '../../../components/Checkbox'
 import '../pageStyles/productStyles.css'
@@ -19,9 +19,7 @@ const Tops = () => {
     setOpen(!open)
   }
 
-  useEffect(() => {
-    setItems(products)
-  }, [])
+  const url = "http://localhost:5000/api/product/category/Tops"
 
   return (
     <div style={{ width: 'auto', height: 'auto' }}>
@@ -122,9 +120,13 @@ const Tops = () => {
           </div>
         </div>
         <div className="containerRightSide">
-          {items.map((item) => (
-            <DisplayProducts key={item.id} product={item} />
-          ))}
+        <DisplayProducts
+            key={url.id}
+            product={url}
+            image={products}
+            setItems={setItems}
+            items={items}
+          />
         </div>
       </div>
     </div>

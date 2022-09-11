@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import products from "./outerwearProducts";
 import DisplayProducts from "../displayProducts";
-import OuterwearHeader from "../../../assets/images/Produkt_headers/ytterkläder.png";
+import OuterwearHeader from "../../../assets/images/Produkt_headers/outerwear.png";
 import FilterIcon from "../../../assets/icons/filter.png";
 import Checkbox from "../../../components/Checkbox";
 import "../pageStyles/productStyles.css";
@@ -19,9 +19,7 @@ const Outerwear = () => {
     setOpen(!open);
   };
 
-  useEffect(() => {
-    setItems(products);
-  }, []);
+  const url = "http://localhost:5000/api/product/category/Outerwear"
 
   return (
     <div style={{ width: "auto", height: "auto" }}>
@@ -122,9 +120,7 @@ const Outerwear = () => {
           </div>
         </div>
         <div className="containerRightSide">
-          {items.map((item) => (
-            <DisplayProducts key={item.id} product={item} />
-          ))}
+            <DisplayProducts key={url.id} product={url} />
         </div>
       </div>
     </div>

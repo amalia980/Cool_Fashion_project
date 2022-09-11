@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import products from "./shirtProducts";
 import DisplayProducts from "../displayProducts";
-import ShirtsHeader from "../../../assets/images/Produkt_headers/skjortor.png";
+import ShirtsHeader from "../../../assets/images/Produkt_headers/shirts.png";
 import FilterIcon from "../../../assets/icons/filter.png";
 import Checkbox from "../../../components/Checkbox";
 import "../pageStyles/productStyles.css";
@@ -19,9 +19,7 @@ const Shirts = () => {
     setOpen(!open);
   };
 
-  useEffect(() => {
-    setItems(products);
-  }, []);
+  const url = "http://localhost:5000/api/product/category/Shirts"
 
   return (
     <div style={{ width: "auto", height: "auto" }}>
@@ -122,9 +120,7 @@ const Shirts = () => {
           </div>
         </div>
         <div className="containerRightSide">
-          {items.map((item) => (
-            <DisplayProducts key={item.id} product={item} />
-          ))}
+        <DisplayProducts key={url.id} product={url}  />
         </div>
       </div>
     </div>
